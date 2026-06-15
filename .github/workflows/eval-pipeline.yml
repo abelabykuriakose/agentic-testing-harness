@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [ main ]
 
+# Tell the runner to use Node 24 globally to silence the deprecation warning
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   evaluate-agent:
     runs-on: ubuntu-latest
